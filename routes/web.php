@@ -30,6 +30,11 @@ Route::get('/home', function() {
 })->name('home')->middleware('auth');
 
 Route::get('/kelolapesertadidik', [App\Http\Controllers\KelolapesertadidikController::class, 'index'])->name('kelolapesertadidik');
+Route::get('/didik', [App\Http\Controllers\KelolapesertadidikController::class, 'tes'])->name('didik');
+
+Route::post('/admin/kelolapesertadidik/add', [KelolapesertadidikController::class, 'store'])->name('tambahh');
+
+
 
 Route::get('/kelolapembayaran/UDB', [App\Http\Controllers\UDBController::class, 'index'])->name('UDB');
 

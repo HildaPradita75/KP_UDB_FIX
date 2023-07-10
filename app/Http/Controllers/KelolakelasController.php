@@ -12,6 +12,8 @@ class KelolakelasController extends Controller
     {
         $kelolakelas = kelolakelas::All();
 
+        // dd($kelolakelas);
+
         return view('kelolakelas', compact('kelolakelas'));
     }
     public function store(Request $req)

@@ -9,17 +9,24 @@ class KelolapesertadidikController extends Controller
 {
     public function index()
     {
-        $kelolapesertadidik = kelolapesertadidik::All();
 
-        return view('kelolapesertadidik', compact('kelolapesertadidik'));
+        $d = kelolapesertadidik::All();
+
+        // dd($d);
+
+        return view('kelolapesertadidik', compact('d'));
+
     }
+
     public function store(Request $req)
     {
         $kelolapesertadidik = new kelolapesertadidik;
 
+            $kelolapesertadidik->tingkat = $req->get('tingkat');
+            $kelolapesertadidik->jurusan = $req->get('jurusan');
+            $kelolapesertadidik->kelas = $req->get('kelas');
             $kelolapesertadidik->nis = $req->get('nis');
-            $kelolapesertadidik->nama_pesertadidik = $req->get('nama_pesertadidik');
-            $kelolapesertadidik->jenis_kelamin = $req->get('jenis_kelamin');
+            $kelolapesertadidik->nama_lengkap = $req->get('nama_lengkap');
 
         $kelolapesertadidik->save();
 
@@ -41,9 +48,12 @@ class KelolapesertadidikController extends Controller
     {
         $kelolapesertadidik = kelolapesertadidik::find($req->get('id'));
 
+        $kelolapesertadidik->jurusan = $req->get('jurusan');
+        $kelolapesertadidik->no = $req->get('no');
+        $kelolapesertadidik->tingkat = $req->get('tingkat');
+        $kelolapesertadidik->kelas = $req->get('kelas');
         $kelolapesertadidik->nis = $req->get('nis');
-        $kelolapesertadidik->nama_pesertadidik = $req->get('nama_pesertadidik');
-        $kelolapesertadidik->jenis_kelamin = $req->get('jenis_kelamin');
+        $kelolapesertadidik->nama_lengkap = $req->get('nama_lengkap');
         
         $kelolapesertadidik->save();
 

@@ -19,9 +19,11 @@ class kelolapesertadidik extends Model
 
         for($i = 0; $i < $user->count(); $i++){
             $kelolapesertadidik_filter[$i]['no'] = $no++ ;
+            $kelolapesertadidik_filter[$i]['tingkat'] = $kelolapesertadidik[$i]->tingkat ;
+            $kelolapesertadidik_filter[$i]['jurusan'] = $kelolapesertadidik[$i]->jurusan ;
+            $kelolapesertadidik_filter[$i]['kelas'] = $kelolapesertadidik[$i]->kelas ;
             $kelolapesertadidik_filter[$i]['nis'] = $kelolapesertadidik[$i]->nis ;
-            $kelolapesertadidik_filter[$i]['nama_pesertadidik'] = $kelolapesertadidik[$i]->nama_pesertadidik ;
-            $kelolapesertadidik_filter[$i]['jenis_kelamin'] = $kelolapesertadidik[$i]->jenis_kelamin ;
+            $kelolapesertadidik_filter[$i]['nama_lengkap'] = $kelolapesertadidik[$i]->nama_lengkap ;
 
         }
 

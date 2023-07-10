@@ -25,11 +25,10 @@
                 <thead>
                     <tr class="text-center">
                         <th>No</th>
-                        <th>Id Kelas</th>
                         <th>Jurusan</th>
                         <th>Kelas</th>
                         <th>Sub Kelas</th>
-                        <th>Tahun Pelajaran</th>
+                        <th>Tahun Pelajarans</th>
                         <th>Wali Kelas</th>
                         <th>Aksi</th>
                     </tr>
@@ -38,7 +37,6 @@
                 @foreach($kelolakelas as $kelolakelass)
                     <tr>
                         <td>{{$loop->iteration}}</td>
-                        <td>{{$kelolakelass->id}}</td>
                         <td>{{$kelolakelass->jurusan}}</td>
                         <td>{{$kelolakelass->kelas}}</td>
                         <td>{{$kelolakelass->sub_kelas}}</td>

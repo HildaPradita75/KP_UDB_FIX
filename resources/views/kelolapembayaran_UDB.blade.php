@@ -38,6 +38,11 @@
                         <option value="{{ $value->id}}" id="getname" >{{ $value->kelas}}</option>
                      @endforeach
                 </select>
+                <div class="div">
+                    <button type="button" class="btn btn-primary ml-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Terapkan
+                    </button>
+                </div>
                 <ul class="dropdown-menu">
                     ...
                 </ul>
@@ -49,21 +54,21 @@
                 <thead>
                     <tr class="text-center">
                         <th>No</th>
-                        <th>Tingkat</th>
-                        <th>Program keahlian</th>
-                        <th>kelas</th>
+                        <th>NIS</th>
+                        <th>Nama Lengkap</th>
+                        <th>Sisa Pembayaran</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="text-center">
                         <td>1</td>
-                        <td>X</td>
-                        <td>AKUL</td>
-                        <td>1</td>
+                        <td>5520120053</td>
+                        <td>Hilda Pradita</td>
+                        <td>Rp. 2.000.000</td>
                         <td>
                             <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#LihatData">
-                            Lihat
+                            Bayar
                             </button>
                         </td>
                     </tr>
@@ -126,18 +131,18 @@
                 <thead>
                     <tr class="text-center">
                         <th>No</th>
-                        <th>Kelas</th>
-                        <th>Jumlah Pesrta Didik</th>
-                        <th>Program Keahlian</th>
+                        <th>NIS</th>
+                        <th>Nama Lengkap</th>
+                        <th>Sisa Pembayaran</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr class="text-center">
                         <td>1</td>
-                        <td>X AKUL 1</td>
-                        <td>30</td>
-                        <td>AKUL</td>
+                        <td>5520120053</td>
+                        <td>Hilda Pradita</td>
+                        <td>Rp. 2.000.000</td>
                         <td>
                             <button class="btn btn-warning">Lihat</button>
                         </td>

@@ -8,189 +8,54 @@
     @stop
 
 @section('content')
-<!-- <div class="container-fluid">
-    <div class="card card-default">
-        <div class="card-body">
-            <div class="navbar-menu-wrappr d-flex align-item-center justify-content-between mb-3">
-                <p class="mb-0"></p>
-                <div> -->
-                    <!-- Button trigger modal -->
-                    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Tambah
-                    </button>
-
-                    <button class="btn btn-danger">Hapus</button>
-                </div>
-            </div> -->
-                    
-            <!-- <table id="table-data" class="table table-bordered">
-                <thead>
-                    <tr class="text-center">
-                        <th>No</th>
-                        <th>Tingkat</th>
-                        <th>Program keahlian</th>
-                        <th>kelas</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="text-center">
-                        <td>1</td>
-                        <td>X</td>
-                        <td>AKUL</td>
-                        <td>1</td>
-                        <td>
-                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#LihatData">
-                            Lihat
-                            </button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>    
-    </div>
-</div>     -->
-
-
-<!-- Modal -->
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <div class="d-flex justify-content-between mb-1">
-            <p>Kelas</p>
-            <input type="text" placeholder="Kelas">        
-        </div>
-        <div class="d-flex justify-content-between mb-1">
-            <p>Jumlah Peserta Didik</p>
-            <input type="num" placeholder="Jumlah Peserta Didik">        
-        </div>
-        <div class="d-flex justify-content-between mb-1">
-            <p>Jurusan</p>
-            <input type="text" placeholder="Jurusan">        
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-        <button type="button" class="btn btn-primary">Simpan</button>
-      </div>
-    </div>
-  </div>
-</div> -->
-<!-- Modal -->
-<!-- <div class="modal fade " id="LihatData" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog ">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <div class="navbar-menu-wrappr d-flex align-item-center justify-content-between mb-3">
-                <p class="mb-0"></p>
-                <div> -->
-                    <!-- Button trigger modal -->
-                    <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Tambah
-                    </button>
-                </div>
-            </div>
-                    
-            <table id="table-data" class="table table-bordered">
-                <thead>
-                    <tr class="text-center">
-                        <th>No</th>
-                        <th>Kelas</th>
-                        <th>Jumlah Pesrta Didik</th>
-                        <th>Program Keahlian</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="text-center">
-                        <td>1</td>
-                        <td>X AKUL 1</td>
-                        <td>30</td>
-                        <td>AKUL</td>
-                        <td>
-                            <button class="btn btn-warning">Lihat</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-      </div>
-    </div>
-  </div>
-</div> -->
-
-
-
 
 <div class="container-fluid">
     <div class="card card-default">
         <div class="card-body">
             <div class="btn-group mb-3">
-            <!-- <div class="navbar-menu-wrappr d-flex align-item-center justify-content-between mb-3"> -->
-                <!-- <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Pilih Tingkat
-                </button> -->
-                <select name="users_id" class="form-select" aria-label="Default select example" id="selectuser">
-                    <option selected>Pilih Tingkat</option>
-                    @foreach($kelolapesertadidik as $key => $value)
-                        <option value="{{ $value->id}}" id="getname" >{{ $value->kelas}}</option>
-                     @endforeach
-                </select>
-                <ul class="dropdown-menu">
-                </ul>
+            <div class="navbar-menu-wrappr d-flex align-item-center justify-content-between mb-3">
+                <p class="mb-0"></p>
+                <div>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Tambah
+                    </button>
                 </div>
-                <div class="btn-group mb-3">
-                <select name="users_id" class="form-select" aria-label="Default select example" id="selectuser">
-                    <option selected>Pilih Jurusan</option>
-                    @foreach($kelolapesertadidik as $key => $value)
-                        <option value="{{ $value->id}}" id="getname" >{{ $value->jurusan}}</option>
-                     @endforeach
-                </select>
-                <select name="users_id" class="form-select" aria-label="Default select example" id="selectuser">
-                    <option selected>Pilih Kelas</option>
-                    @foreach($kelolapesertadidik as $key => $value)
-                        <option value="{{ $value->id}}" id="getname" >{{ $value->kelas}}</option>
-                     @endforeach
-                </select>
-                <ul class="dropdown-menu">
-                    ...
-                </ul>
-                </div>    
-
-
-                    
-            <table id="table-data" class="table table-bordered">
+            </div>
+            </div>  
+                    <!-- TEST -->
+                <table id="table-data" class="table table-bordered">
                 <thead>
                     <tr class="text-center">
                         <th>No</th>
                         <th>Tingkat</th>
                         <th>Jurusan</th>
                         <th>Kelas</th>
-                        <th>Jumlah</th>
+                        <th>NIS</th>
+                        <th>Nama Lengkap</th>
                         <th>Aksi</th>
                     </tr>
                 </thead>
-                <!--<tbody>
-                    <tr class="text-center">
-                        <td>1</td>
-                        <td>X</td>
-                        <td>AKUL</td>
-                        <td>1</td>
+                <tbody>
+                @foreach($d as $kelolapesertadidiks)
+                    <tr>
+                        <td>{{$loop->iteration}}</td>
+                        <td>{{$kelolapesertadidiks->id}}</td>
+                        <td>{{$kelolapesertadidiks->jurusan}}</td>
+                        <td>{{$kelolapesertadidiks->kelas}}</td>
+                        <td>{{$kelolapesertadidiks->nis}}</td>
+                        <td>{{$kelolapesertadidiks->nama_lengkap}}</td>
                         <td>
-                            <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#LihatData">
-                            Lihat
-                            </button>
+                            <div class="text-center">
+                                <button type="button" class="btn btn-warning btn-rounded" data-id="{{ $kelolapesertadidiks->id }}" id="btn-edit-user" data-bs-toggle="modal" data-bs-target="#editModal">
+                                    Edit
+                                </button>
+                                <a class="btn btn-sm btn-danger btn-rounded" href="admin/kelolakelas/delete/{{$kelolapesertadidiks->id}}">Hapus</a>
+                            </div>
                         </td>
                     </tr>
-                </tbody> -->
+                @endforeach
+                </tbody>
             </table>
         </div>    
     </div>
@@ -206,23 +71,35 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <div class="d-flex justify-content-between mb-1">
-            <p>Kelas</p>
-            <input type="text" placeholder="Kelas">        
+      <form class="forms-sample" method="post" action="{{ route('tambahh')}}" enctype="multipart/form-date">
+            @csrf
+            
+            <div class="d-flex justify-content-between mb-1">
+                <p>Tingkat</p>
+                <input type="num" placeholder="Tingkat" name="tingkat">        
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+                <p>Jurusan</p>
+                <input type="text" placeholder="Jurusan" name="jurusan">        
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+                <p>Kelas</p>
+                <input type="text" placeholder="Kelas" name="kelas">        
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+                <p>NIS</p>
+                <input type="text" placeholder="NIS" name="nis">        
+            </div>
+            <div class="d-flex justify-content-between mb-1">
+                <p>Nama Lengkap</p>
+                <input type="text" placeholder="Lengkap" name="nama_lengkap">        
+            </div>
         </div>
-        <div class="d-flex justify-content-between mb-1">
-            <p>Jumlah Peserta Didik</p>
-            <input type="num" placeholder="Jumlah Peserta Didik">        
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
+            <button type="submit" class="btn btn-primary">Simpan</button>
         </div>
-        <div class="d-flex justify-content-between mb-1">
-            <p>Jurusan</p>
-            <input type="text" placeholder="Jurusan">        
-        </div>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
-        <button type="button" class="btn btn-primary">Simpan</button>
-      </div>
+</form>
     </div>
   </div>
 </div>
@@ -240,35 +117,44 @@
                 <div>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                    Tambah
+                    Tambah 
                     </button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Tambah 
+                    </button>
+                    <!-- <p>a</p> -->
                 </div>
             </div>
+           
                     
-            <table id="table-data" class="table table-bordered">
-                <thead>
-                    <tr class="text-center">
-                        <th>No</th>
-                        <th>Kelas</th>
-                        <th>Jumlah Pesrta Didik</th>
-                        <th>Program Keahlian</th>
-                        <th>Aksi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="text-center">
-                        <td>1</td>
-                        <td>X AKUL 1</td>
-                        <td>30</td>
-                        <td>AKUL</td>
-                        <td>
-                            <button class="btn btn-warning">Lihat</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-      </div>
+            
+        </div>    
     </div>
-  </div>
-</div>
+</div> 
 @stop
+
+
+@section('js')
+<script>
+     $(function(){
+          $(document).on('click','#btn-edit-user', function(){
+
+               let id = $(this).data('id');
+
+               $.ajax({
+                    type: "get",
+                    url: "{{url('/admin/ajaxadmin/dataUser')}}/"+id,
+                    dataType: 'json',
+                    success: function(res){
+                         $('#edit-id').val(res.id);
+                         $('#edit-tingkat').val(res.tingkat);
+                         $('#edit-jurusan').val(res.jurusan);
+                         $('#edit-kelas').val(res.kelas);
+                         $('#edit-nis').val(res.nis);
+                         $('#edit-nama_lengkap').val(res.nama_lengkap);
+                    },
+               });
+          });
+     });
+</script>
+@endsection
